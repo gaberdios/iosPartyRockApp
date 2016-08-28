@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06F69CC21D73526300D1B984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F69CC11D73526300D1B984 /* AppDelegate.swift */; };
-		06F69CC41D73526300D1B984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F69CC31D73526300D1B984 /* ViewController.swift */; };
+		06F69CC41D73526300D1B984 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F69CC31D73526300D1B984 /* MainVC.swift */; };
 		06F69CC71D73526300D1B984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F69CC51D73526300D1B984 /* Main.storyboard */; };
 		06F69CC91D73526300D1B984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F69CC81D73526300D1B984 /* Assets.xcassets */; };
 		06F69CCC1D73526300D1B984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F69CCA1D73526300D1B984 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		06F69CBE1D73526300D1B984 /* PartyRockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyRockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F69CC11D73526300D1B984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06F69CC31D73526300D1B984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06F69CC31D73526300D1B984 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		06F69CC61D73526300D1B984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06F69CC81D73526300D1B984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F69CCB1D73526300D1B984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +35,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064B4CDF1D7356E00039C328 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		064B4CE01D7356EA0039C328 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		064B4CE11D7356F90039C328 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06F69CC31D73526300D1B984 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		06F69CB51D73526300D1B984 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +76,13 @@
 		06F69CC01D73526300D1B984 /* PartyRockApp */ = {
 			isa = PBXGroup;
 			children = (
+				064B4CE11D7356F90039C328 /* Controller */,
+				064B4CE01D7356EA0039C328 /* View */,
+				064B4CDF1D7356E00039C328 /* Model */,
 				06F69CC11D73526300D1B984 /* AppDelegate.swift */,
-				06F69CC31D73526300D1B984 /* ViewController.swift */,
+				06F69CCA1D73526300D1B984 /* LaunchScreen.storyboard */,
 				06F69CC51D73526300D1B984 /* Main.storyboard */,
 				06F69CC81D73526300D1B984 /* Assets.xcassets */,
-				06F69CCA1D73526300D1B984 /* LaunchScreen.storyboard */,
 				06F69CCD1D73526300D1B984 /* Info.plist */,
 			);
 			path = PartyRockApp;
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F69CC41D73526300D1B984 /* ViewController.swift in Sources */,
+				06F69CC41D73526300D1B984 /* MainVC.swift in Sources */,
 				06F69CC21D73526300D1B984 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +326,7 @@
 				06F69CD21D73526300D1B984 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
