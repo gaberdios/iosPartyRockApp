@@ -3,8 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -15,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="xsj-GH-Jir">
@@ -25,51 +31,124 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgi-xW-zWt">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lST-aa-661">
-                                        <frame key="frameInset" minX="20" minY="7" width="98" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Top Videos">
-                                            <color key="titleColor" red="0.74117647058823533" green="0.0" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFX-FL-Pvu">
-                                        <frame key="frameInset" minX="138" minY="8" width="98" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Top Songs">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-kw-YbR">
-                                        <frame key="frameInset" minX="255" minY="8" width="98" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Events">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BRz-Ke-ePw">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lST-aa-661">
+                                                <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="0.74117647058823533" green="0.0" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFX-FL-Pvu">
+                                                <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-kw-YbR">
+                                                <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="BRz-Ke-ePw" firstAttribute="top" secondItem="wgi-xW-zWt" secondAttribute="top" constant="3" id="1Eh-y5-IJM"/>
+                                    <constraint firstAttribute="trailing" secondItem="BRz-Ke-ePw" secondAttribute="trailing" constant="8" id="MeM-bj-7hx"/>
+                                    <constraint firstItem="BRz-Ke-ePw" firstAttribute="leading" secondItem="wgi-xW-zWt" secondAttribute="leading" constant="8" id="ddS-jH-cqW"/>
                                     <constraint firstAttribute="height" constant="37" id="fbY-47-1Bo"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49m-bZ-0Qu">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="qTf-t0-bal">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTf-t0-bal" id="98l-J0-QxE">
+                                            <frame key="frameInset" width="414" height="94.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="x0D-a0-FQO">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Bbg-MZ-cVv"/>
+                                                        <constraint firstAttribute="height" constant="70" id="F4V-e3-XGx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-js-Iba">
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="x0D-a0-FQO" firstAttribute="leading" secondItem="98l-J0-QxE" secondAttribute="leadingMargin" id="69H-SN-Y7m" userLabel="Image View.leading = leadingMargin"/>
+                                                <constraint firstItem="x0D-a0-FQO" firstAttribute="centerY" secondItem="98l-J0-QxE" secondAttribute="centerY" id="i6w-ec-uGZ"/>
+                                                <constraint firstItem="Dt8-js-Iba" firstAttribute="centerY" secondItem="98l-J0-QxE" secondAttribute="centerY" id="iRq-Me-bPX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Dt8-js-Iba" secondAttribute="trailing" constant="8" id="lF0-Qs-7DE"/>
+                                                <constraint firstItem="Dt8-js-Iba" firstAttribute="leading" secondItem="x0D-a0-FQO" secondAttribute="trailing" constant="8" id="sHm-B6-NFK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="49m-bZ-0Qu" firstAttribute="top" secondItem="wgi-xW-zWt" secondAttribute="bottom" id="8MA-xQ-pYO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="49m-bZ-0Qu" secondAttribute="bottom" id="Fdi-S8-Dpq"/>
                             <constraint firstItem="xsj-GH-Jir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KDB-cD-Chw"/>
+                            <constraint firstItem="49m-bZ-0Qu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Myx-NS-ssA"/>
                             <constraint firstItem="xsj-GH-Jir" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N9n-Xz-AWx"/>
                             <constraint firstAttribute="trailing" secondItem="wgi-xW-zWt" secondAttribute="trailing" id="RAE-Y7-nfw"/>
                             <constraint firstAttribute="trailing" secondItem="xsj-GH-Jir" secondAttribute="trailing" id="jew-hz-e7U"/>
                             <constraint firstItem="wgi-xW-zWt" firstAttribute="top" secondItem="xsj-GH-Jir" secondAttribute="bottom" id="mQg-kB-Ypk"/>
+                            <constraint firstAttribute="trailing" secondItem="49m-bZ-0Qu" secondAttribute="trailing" id="rha-jT-N9z"/>
                             <constraint firstItem="wgi-xW-zWt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wGE-W1-hek"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="K4i-mO-hqN" kind="showDetail" identifier="VideoVC" id="ZZ9-GZ-65V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="31.884057971014496" y="36.684782608695656"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="Bxw-mg-NlI">
+            <objects>
+                <viewController id="K4i-mO-hqN" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HGy-op-hma"/>
+                        <viewControllerLayoutGuide type="bottom" id="0hd-yR-66O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smU-XD-tEe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA2-pQ-bIh">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EnQ-O5-TNH"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kA2-pQ-bIh" secondAttribute="trailing" id="LLj-5T-CeP"/>
+                            <constraint firstItem="kA2-pQ-bIh" firstAttribute="top" secondItem="smU-XD-tEe" secondAttribute="top" id="TeS-tD-yo4"/>
+                            <constraint firstItem="kA2-pQ-bIh" firstAttribute="leading" secondItem="smU-XD-tEe" secondAttribute="leading" id="ZK5-J2-kvV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibT-J1-jpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="36.684782608695656"/>
         </scene>
     </scenes>
     <resources>
