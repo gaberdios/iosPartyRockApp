@@ -65,7 +65,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49m-bZ-0Qu">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="qTf-t0-bal">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="qTf-t0-bal" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTf-t0-bal" id="98l-J0-QxE">
@@ -93,6 +93,10 @@
                                                 <constraint firstItem="Dt8-js-Iba" firstAttribute="leading" secondItem="x0D-a0-FQO" secondAttribute="trailing" constant="8" id="sHm-B6-NFK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoTitle" destination="Dt8-js-Iba" id="01t-5d-1eL"/>
+                                            <outlet property="videopreviewImage" destination="x0D-a0-FQO" id="7kx-Np-Duq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
