@@ -65,7 +65,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49m-bZ-0Qu">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="qTf-t0-bal" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="95" id="qTf-t0-bal" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTf-t0-bal" id="98l-J0-QxE">
@@ -116,6 +116,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="49m-bZ-0Qu" id="VBq-R0-03n"/>
                         <segue destination="K4i-mO-hqN" kind="showDetail" identifier="VideoVC" id="ZZ9-GZ-65V"/>
                     </connections>
                 </viewController>
@@ -141,14 +142,29 @@
                                     <constraint firstAttribute="height" constant="200" id="EnQ-O5-TNH"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25R-Dr-kp7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="F4L-V2-jlE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kA2-pQ-bIh" secondAttribute="trailing" id="LLj-5T-CeP"/>
+                            <constraint firstItem="25R-Dr-kp7" firstAttribute="top" secondItem="kA2-pQ-bIh" secondAttribute="bottom" constant="50" id="Mi1-47-CJ2"/>
+                            <constraint firstItem="25R-Dr-kp7" firstAttribute="trailing" secondItem="smU-XD-tEe" secondAttribute="trailingMargin" constant="5" id="RIK-An-2Sr"/>
                             <constraint firstItem="kA2-pQ-bIh" firstAttribute="top" secondItem="smU-XD-tEe" secondAttribute="top" id="TeS-tD-yo4"/>
                             <constraint firstItem="kA2-pQ-bIh" firstAttribute="leading" secondItem="smU-XD-tEe" secondAttribute="leading" id="ZK5-J2-kvV"/>
+                            <constraint firstItem="25R-Dr-kp7" firstAttribute="leading" secondItem="smU-XD-tEe" secondAttribute="leadingMargin" constant="5" id="fta-Cv-s94"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="25R-Dr-kp7" id="3fj-7Y-8NN"/>
+                        <outlet property="webView" destination="kA2-pQ-bIh" id="3pS-Up-Vou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibT-J1-jpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
